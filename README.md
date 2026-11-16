@@ -87,13 +87,6 @@ Results will be added after the experiments are run. Generate the table with `py
 * **Hugging Face Spaces / Streamlit Community Cloud:** put `runs/deploy/best.keras` (your final model), `runs/splits.json` and the code in the repo; pin the TensorFlow version you trained with (and use `tensorflow-cpu` on small free tiers).
 * **Docker:** `docker build -t robustleaf .` then `docker run -p 8501:8501 robustleaf`.
 
-## Paper
-`paper/main.tex` is an IEEE-format LaTeX paper. After running the experiments:
-```bash
-python make_paper_figures.py --data_dir PlantVillage/color --field_dir path/to/field_images
-python fill_paper.py --field_images N --field_classes M --gpu "GPU name" --device "CPU name"
-```
-Then compile `paper/` with pdfLaTeX (for example on Overleaf).
 
 ## Limitations
 The saturation-based leaf mask is a heuristic (it can fail for low-saturation leaves, white backgrounds or several leaves per image); severity is a colour-based estimate; the system assumes a single leaf per image. Treatment advice in the knowledge base is general guidance - follow product labels and local recommendations.
