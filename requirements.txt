@@ -1,0 +1,7 @@
+tensorflow>=2.16
+scikit-learn
+matplotlib
+numpy
+pillow
+streamlit
+reportlab
